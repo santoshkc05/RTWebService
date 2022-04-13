@@ -61,7 +61,7 @@ public class RTWebService {
                 //print(type(of:response.result.value))
                 switch response.result {
                 case .success:
-                    let res = RTResponse(value: response.result.value) as! Any
+                    let res = RTResponse(value: response.result.value)
                     let result = RTResult.success(res.response)
                     onCompletion(result)
                 case .failure(let error):
